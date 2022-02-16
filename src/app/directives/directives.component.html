@@ -1,0 +1,37 @@
+
+<div *ngIf="isCondition">This is ngIf directive</div>
+
+<div *ngIf="isCondition2; then truepart; else elsepart"></div>
+
+<ng-template #truepart>This is my true part</ng-template>
+
+<ng-template #elsepart>This is my else part</ng-template>
+<hr>
+
+<h5 class="container">*ngFor directive</h5>
+
+
+<ul  *ngFor="let c of car">
+ <li class="container">
+ {{c}} </li>
+</ul>
+
+<hr>
+
+<h5 class="container">*ngFor directive</h5>
+
+<div class="container">
+<div [ngSwitch]="bikes">
+  <!-- <div *ngSwitchCase="'bajaj'">You have select Bajaj</div>
+    <div *ngSwitchCase="'tvs'">You have select Bajaj</div>
+    <div *ngSwitchCase="'fz'">You have select Bajaj</div>
+    <div *ngSwitchCase="'hero'">You have select Bajaj</div>
+       <div *ngSwitchCase="'honda'">You have select Bajaj</div>
+       <div *ngSwitchDefault>You have select Invalid choice</div>  -->
+
+       <div *ngFor="let bike of bikes"></div>
+       <div *ngSwitchCase="bikes">You have select {{bike}}</div>
+</div></div>
+
+
+
